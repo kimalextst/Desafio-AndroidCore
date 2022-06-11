@@ -16,42 +16,4 @@ import br.com.zup.simcitysaojoao.model.Produto
 import cadastrarproduto.adapter.ProdutoAdapter
 
 class MostrarProdutosCadastradosFragment(private val lista : MutableList<Produto>) : Fragment() {
-
-    private lateinit var binding: FragmentMostrarProdutosCadastradosBinding
-
-    private val adapter: ProdutoAdapter by lazy {
-        ProdutoAdapter(arrayListOf(), this::irParaDetalhe)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {binding = FragmentMostrarProdutosCadastradosBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        exibirRecyclerView()
-    }
-
-    private fun exibirRecyclerView() {
-        atualizarListaProdutos()
-        binding.rvProduto.adapter = adapter
-        binding.rvProduto.layoutManager = LinearLayoutManager(requireContext())
-    }
-
-    private fun atualizarListaProdutos() {
-        val listaProdutos = lista
-
-        adapter.atualizarListaProduto(listaProdutos)
-    }
-
-    private fun irParaDetalhe(produto: Produto) {
-        val intent = Intent(requireContext(), DetalhesAlbumActivity::class.java).apply {
-            putExtra(PRODUTO_KEY, produto)
-        }
-        startActivity(intent)
-    }
 }
