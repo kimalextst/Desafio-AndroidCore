@@ -29,6 +29,15 @@ class ProdutoAdapter (
 
     override fun getItemCount(): Int = listaProduto.size
 
+    fun atualizarListaProduto(novaLista: MutableList<Produto>) {
+        if (listaProduto.size == 0) {
+            listaProduto = novaLista
+        } else {
+            listaProduto.addAll(novaLista)
+        }
+        notifyDataSetChanged()
+    }
+
     class ProdutoViewHolder(val binding: ProdutoItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun adicionarInformacoesView( produto: Produto ) {
             binding.ivProduto.setImageResource(produto.getImage())
