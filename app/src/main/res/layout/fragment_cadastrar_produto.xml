@@ -1,0 +1,86 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/margin_16"
+    android:paddingEnd="@dimen/margin_16"
+    tools:context="cadastrarproduto.fragments.cadastrarprodutofragment.CadastrarProdutoFragment">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="@string/cadastro_de_produtos"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomeProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:hint="@string/nome_do_produto"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+
+    <EditText
+        android:id="@+id/etQntdProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:hint="@string/quantidade_do_produto"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeProduto" />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:hint="@string/_pedir_valor_produto"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintTop_toBottomOf="@+id/etQntdProduto" />
+
+    <EditText
+        android:id="@+id/etReceita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:hint="@string/receita"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
+
+    <Button
+        android:id="@+id/bvCadastrarProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="@string/cadastrar_novo_produto_button"
+        app:layout_constraintTop_toBottomOf="@+id/etReceita"
+        android:backgroundTint="@color/red"/>
+
+    <Button
+        android:id="@+id/bvVerProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/ver_produtos_button"
+        app:layout_constraintTop_toBottomOf="@+id/bvCadastrarProduto"
+        android:backgroundTint="@color/green"/>
+
+    <Button
+        android:id="@+id/bvValorTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/valor_total_button"
+        app:layout_constraintTop_toBottomOf="@+id/bvVerProdutos"
+        android:backgroundTint="@color/dark_blue"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

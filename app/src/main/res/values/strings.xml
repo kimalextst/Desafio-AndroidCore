@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">SimCity Sao Joao</string>
+    <string name="texto_home">Festas juninas, é algo muito bom! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de compras para sua festa junina de maneira fácil e simples, só cadastrar os produtos de sua receita e se divertir!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_produto">Produtos</string>
+    <string name="cadastro_de_produtos">Cadastro de produtos</string>
+    <string name="nome_do_produto">Nome do produto</string>
+    <string name="quantidade_do_produto">Quantidade do produto</string>
+    <string name="_pedir_valor_produto">Valor (unitário) do produto</string>
+    <string name="receita">Receita</string>
+    <string name="cadastrar_novo_produto_button">CADASTRAR NOVO PRODUTO</string>
+    <string name="ver_produtos_button">VER PRODUTOS</string>
+    <string name="valor_total_button">VALOR TOTAL</string>
+    <string name="produtos_cadastrados">Produtos cadastrados</string>
 </resources>

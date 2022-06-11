@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvItemLista"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivProduto"
+            android:layout_width="@dimen/length_50"
+            android:layout_height="@dimen/length_50"
+            android:layout_margin="@dimen/margin_8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carrinho"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvQntdProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginBottom="16dp"
+            android:text="@string/quantidade_do_produto"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProduto"
+            app:layout_constraintStart_toEndOf="@id/ivProduto" />
+
+        <TextView
+            android:id="@+id/tvSeparacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            app:layout_constraintStart_toEndOf="@id/tvQntdProduto"
+            app:layout_constraintEnd_toStartOf="@id/tvNomeProduto"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProduto"
+            app:layout_constraintTop_toTopOf="@+id/ivProduto"/>
+
+        <TextView
+            android:id="@+id/tvNomeProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_do_produto"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProduto"
+            app:layout_constraintStart_toEndOf="@+id/tvSeparacao"
+            app:layout_constraintTop_toTopOf="@+id/ivProduto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
