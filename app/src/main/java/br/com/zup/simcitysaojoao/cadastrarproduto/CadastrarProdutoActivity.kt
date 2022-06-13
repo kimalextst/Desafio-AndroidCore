@@ -35,9 +35,7 @@ class CadastrarProdutoActivity : AppCompatActivity() {
         }
 
         binding.bvVerProdutos.setOnClickListener {
-            if (listaProdutos == null){
-                Toast.makeText(this,"Lista vazia",Toast.LENGTH_LONG).show()
-            } else {
+            if (listaProdutos.isNotEmpty()){
                 irParaMostrarProdutosCadastrados(enviarDados())
             }
         }
