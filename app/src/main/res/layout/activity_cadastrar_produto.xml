@@ -53,7 +53,7 @@
       android:id="@+id/etReceita"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:inputType="numberDecimal"
+      android:inputType="text"
       android:layout_marginTop="@dimen/margin_16"
       android:hint="@string/receita"
       android:textSize="@dimen/text_14"
