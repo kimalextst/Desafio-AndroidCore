@@ -31,6 +31,7 @@ class CadastrarProdutoActivity : AppCompatActivity() {
 
         binding.bvCadastrarProduto.setOnClickListener {
             adicionarListaDados()
+            Toast.makeText(this,"Produto cadastrado com sucesso",Toast.LENGTH_LONG).show()
         }
 
         binding.bvVerProdutos.setOnClickListener {
