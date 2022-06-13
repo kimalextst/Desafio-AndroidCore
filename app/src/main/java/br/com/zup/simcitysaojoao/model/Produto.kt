@@ -15,6 +15,6 @@ class Produto(
     fun getImage() = this.image
     fun getNome() = this.nome
     fun getQntd() = this.quantidade
-    fun getValor() = this.valorUnitario.toDouble()
+    fun getValor() = this.valorUnitario
     fun getReceita() = this.receita
 }

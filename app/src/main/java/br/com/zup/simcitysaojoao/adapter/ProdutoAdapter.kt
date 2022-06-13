@@ -22,9 +22,9 @@ class ProdutoAdapter(
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
         val produto = listaProduto[position]
         holder.adicionarInformacoesView(produto)
-//        holder.binding.cvItemLista.setOnClickListener {
-//            clickProduto(produto)
-//        }
+        holder.binding.cvItemLista.setOnClickListener {
+            clickProduto(produto)
+        }
     }
 
     override fun getItemCount(): Int = listaProduto.size
