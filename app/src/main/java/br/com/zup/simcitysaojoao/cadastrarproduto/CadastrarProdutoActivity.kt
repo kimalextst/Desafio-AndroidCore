@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.text.isDigitsOnly
 import br.com.zup.simcitysaojoao.LISTA_KEY
 import br.com.zup.simcitysaojoao.PRODUTO
 import br.com.zup.simcitysaojoao.R
@@ -31,7 +32,6 @@ class CadastrarProdutoActivity : AppCompatActivity() {
 
         binding.bvCadastrarProduto.setOnClickListener {
             adicionarListaDados()
-            Toast.makeText(this,"Produto cadastrado com sucesso",Toast.LENGTH_LONG).show()
         }
 
         binding.bvVerProdutos.setOnClickListener {
@@ -44,6 +44,7 @@ class CadastrarProdutoActivity : AppCompatActivity() {
     private fun enviarDados(): Produto? {
         return if (!verificarCamposEdicao()){
             val produto = Produto(nome,qntd,valorUni,receita)
+            Toast.makeText(this,"Produto cadastrado com sucesso",Toast.LENGTH_LONG).show()
             limparOsCamposEdicao()
 
             produto
@@ -71,19 +72,19 @@ class CadastrarProdutoActivity : AppCompatActivity() {
     private fun verificarCamposEdicao(
     ): Boolean {
         when {
-            this.nome.isEmpty() -> {
+            this.nome.isBlank() -> {
                 binding.etNomeProduto.error = "Insira o nome do produto!"
                 return true
             }
-            this.qntd.isEmpty() -> {
+            this.qntd.isBlank() -> {
                 binding.etQntdProduto.error = "Insira um valor!"
                 return true
             }
-            this.valorUni.isEmpty() -> {
+            this.valorUni.isBlank() -> {
                 binding.etValor.error = "Insira um valor!"
                 return true
             }
-            this.receita.isEmpty() -> {
+            this.receita.isBlank() -> {
                 binding.etReceita.error = "Insira uma receita!"
                 return true
             }
