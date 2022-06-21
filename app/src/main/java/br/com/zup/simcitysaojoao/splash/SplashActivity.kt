@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import br.com.zup.simcitysaojoao.R
-import br.com.zup.simcitysaojoao.home.HomeActivity
+import br.com.zup.simcitysaojoao.main.MainActivity
 import java.util.*
 
 class SplashActivity : AppCompatActivity() {
@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun jump() {
         timer.cancel()
-        startActivity(Intent(this, HomeActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
         this.finish()
     }
 }

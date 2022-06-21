@@ -38,6 +38,10 @@ class ProdutoAdapter(
         notifyDataSetChanged()
     }
 
+    fun limpaListaDeProdutos() {
+        listaProduto.clear()
+    }
+
     class ProdutoViewHolder(val binding: ProdutoItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun adicionarInformacoesView( produto: Produto ) {
             binding.ivProduto.setImageResource(produto.getImage())
